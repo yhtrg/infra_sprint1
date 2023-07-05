@@ -1,5 +1,5 @@
 IP: 51.250.22.214;
 name_taski: https://infraspr.hopto.org;
 name_kittygram: https://kittyflue.hopto.org;
-login: yc-user;
-password: NRjeSf;
+login: admin1;
+password: admin1;
