@@ -9,11 +9,11 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY',"".join(random.choices(string.hexdigits, k=10)))
+SECRET_KEY = os.getenv('SECRET_KEY','GC+XWe0eN/yfeE0TyuFXHlaYSeKlxOyNZtjTFujiSpMjLpOV1VlH7eqcirT7S01S')
 
-DEBUG = os.getenv('DEBUG', '').lower()=='true'
+DEBUG = os.getenv('DEBUG', '').lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default=str).split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='localhost').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
