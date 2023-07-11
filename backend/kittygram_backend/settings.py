@@ -1,15 +1,19 @@
 import os
 from pathlib import Path
+import random
+import string
+
 from dotenv import load_dotenv
+
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY',"".join(random.choices(string.hexdigits, k=10)))
 
-DEBUG = os.getenv('DEBUG', False)
+DEBUG = os.getenv('DEBUG', '').lower()=='true'
 
-ALLOWED_HOSTS = [os.getenv('IP'), '127.0.0.1', 'localhost', os.getenv('PRIVATE_DNC')]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default=str).split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
