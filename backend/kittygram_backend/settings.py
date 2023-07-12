@@ -1,7 +1,5 @@
 import os
 from pathlib import Path
-import random
-import string
 
 from dotenv import load_dotenv
 
@@ -9,7 +7,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY','GC+XWe0eN/yfeE0TyuFXHlaYSeKlxOyNZtjTFujiSpMjLpOV1VlH7eqcirT7S01S')
+SECRET_KEY = os.getenv('SECRET_KEY','GC+XWe0eN/yfeE0TyuFXHlaYSeKlxOyNZt')
 
 DEBUG = os.getenv('DEBUG', '').lower() == 'true'
 
